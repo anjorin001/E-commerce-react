@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://anjorin001.github.io/E-commerce-react",
+  "homepage": "https://anjorin001.github.io/e-commerce",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
