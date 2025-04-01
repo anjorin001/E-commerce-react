@@ -1,8 +1,10 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Category from "./Category";
 import { ShoppingCart } from 'lucide-react'
 const Navbar = ({ GetProduct, setFilteredProduct }) => {
+  const navigate = useNavigate()
   return (
     <div className="navbar-container">     
       <nav className="navbar">
@@ -10,10 +12,9 @@ const Navbar = ({ GetProduct, setFilteredProduct }) => {
         <NavLink to="/about" className={({ isActive }) => isActive ? 'active-page' : 'inactive-page' }>About</NavLink>
         <NavLink to="/dashboard" className={({ isActive }) => isActive ? 'active-page' : 'inactive-page' }>Account</NavLink>
         <Category GetProduct={GetProduct} setFilteredProduct={setFilteredProduct} />
+        <NavLink to="/cart" className='mobile-cart'>Cart</NavLink>
       </nav>
-      <Link to={"/cart"}>
-        <button className="cart"><ShoppingCart /></button>
-      </Link>
+        <button className="cart" onClick={() => navigate('/cart')}><ShoppingCart size={20}/></button>
     </div>
   );
 };

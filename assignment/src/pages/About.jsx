@@ -3,7 +3,8 @@ import GeneralNavbar from "../components/GeneralNavbar";
 import AnimatedTooltipDemo from "../components/ui/AnimatedTooltipDemo";
 const AboutUs = () => {
   return (
-    <main className="about-page">
+    <div className="page-content">
+      <main className="about-page">
       <GeneralNavbar />
       <section className="about-header">
         <h1>About Swiftbuy</h1>
@@ -58,6 +59,7 @@ const AboutUs = () => {
         <p>© {new Date().getFullYear()} Swiftbuy. All rights reserved.</p>
       </footer>
     </main>
+    </div>
   );
 };
 
